@@ -9,7 +9,7 @@ window.addEventListener('load', addBreedOption);
 
 async function addBreedOption() {
   let breedsData;
-
+  selectError.classList.add('is-hidden');
   try {
     breedsData = await fetchBreeds();
 
