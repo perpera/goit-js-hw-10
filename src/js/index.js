@@ -2,7 +2,7 @@ import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 const breedSelect = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
-const error = document.querySelector('.error');
+const selectError = document.querySelector('.error');
 const catInfo = document.querySelector('.cat-info');
 
 window.addEventListener('load', addBreedOption);
@@ -24,7 +24,7 @@ async function addBreedOption() {
     loader.classList.add('is-hidden');
   } catch (error) {
     console.error(error);
-    error.classList.remove('is-hidden');
+    selectError.classList.remove('is-hidden');
     breedSelect.classList.add('is-hidden');
     loader.classList.add('is-hidden');
   }
@@ -34,7 +34,7 @@ async function addBreedOption() {
 
     loader.classList.remove('is-hidden');
     catInfo.classList.add('is-hidden');
-    error.classList.add('is-hidden');
+    selectError.classList.add('is-hidden');
 
     try {
       const result = await fetchCatByBreed(selectBreedId);
@@ -50,7 +50,7 @@ async function addBreedOption() {
       catInfo.classList.remove('is-hidden');
     } catch (error) {
       console.error(error);
-      error.classList.remove('is-hidden');
+      selectError.classList.remove('is-hidden');
       loader.classList.add('is-hidden');
     }
   });
