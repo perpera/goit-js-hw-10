@@ -1,13 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8fcff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
 .breed-select {
-  width: 400px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
 }
 
+.breed-select:focus,
+.breed-select:hover {
+  border-color: #007bff;
+}
+
+.loader,
 .error {
-  color: tomato;
-}
-
-.loader {
+  font-size: 18px;
   font-weight: 600;
+  color: tomato;
+  margin-bottom: 10px;
 }
 
 .cat-info {
@@ -19,4 +48,8 @@
 .textInfo {
   font-size: large;
   max-width: 800px;
+}
+
+.is-hidden {
+  display: none;
 }
