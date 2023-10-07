@@ -1,0 +1,22 @@
+.breed-select {
+  width: 400px;
+}
+
+.error {
+  color: tomato;
+}
+
+.loader {
+  font-weight: 600;
+}
+
+.cat-info {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.textInfo {
+  font-size: large;
+  max-width: 800px;
+}
